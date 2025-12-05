@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات الخليج الشاملة - أكبر منصة خدمات منزلية بدول الخليج</title>
+    <meta name="description" content="أكبر منصة خدمات منزلية ومهنية بدول الخليج العربي - أكثر من 150 خدمة متخصصة">
+    <meta name="keywords" content="خدمات منزلية الرياض, نظافة منازل جدة, صيانة منزلية الدمام, مكافحة حشرات مكة, سباك بالرياض, كهربائي جدة, نقل عفش الخبر, عزل أسطح المدينة, جلي رخام الرياض, تنظيف خزانات جدة">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a56db;
+            --secondary-color: #7c3aed;
+            --accent-color: #f59e0b;
+            --success-color: #10b981;
+            --dark-color: #1f2937;
+            --light-color: #f9fafb;
+            --gray-color: #6b7280;
+            --gradient-primary: linear-gradient(135deg, #1a56db 0%, #7c3aed 100%);
+            --gradient-secondary: linear-gradient(135deg, #f59e0b 0%, #ec4899 100%);
+            --gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.2);
+            --border-radius-sm: 8px;
+            --border-radius-md: 12px;
+            --border-radius-lg: 20px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f5f7fa;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        /* تحسينات عامة */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* الهيدر المتميز */
+        header {
+            background: var(--gradient-primary);
+            box-shadow: var(--shadow-lg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background-color: rgba(26, 86, 219, 0.95);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            background: var(--gradient-secondary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .header-controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .whatsapp-btn, .phone-btn {
+            padding: 12px 24px;
+            border-radius: var(--border-radius-sm);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        
+        .whatsapp-btn {
+            background: var(--gradient-success);
+            color: white;
+        }
+        
+        .phone-btn {
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .phone-btn:hover {
+            background: #f0f4ff;
+            transform: translateY(-2px);
+        }
+        
+        /* قسم الهيرو الجديد */
+        .hero {
+            background: linear-gradient(rgba(26, 86, 219, 0.9), rgba(124, 58, 237, 0.9)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            background: var(--gradient-secondary);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius-md);
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        /* قسم الخدمات المتميز */
+        .services-section {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: var(--gray-color);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .category-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        
+        .category-btn {
+            padding: 12px 24px;
+            background: var(--light-color);
+            border: 2px solid #e5e7eb;
+            border-radius: var(--border-radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--dark-color);
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background: var(--gradient-primary);
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 3rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .service-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .service-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .award-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.4;
+        }
+        
+        .service-price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .service-price span {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+        
+        .service-price small {
+            color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+        
+        .rating-star {
+            color: #fbbf24;
+        }
+        
+        /* قسم المميزات المتميز */
+        .features {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius-lg);
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            opacity: 0.9;
+        }
+        
+        /* قسم اتصل بنا المتميز */
+        .contact-section {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            background: var(--light-color);
+            padding: 40px;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: white;
+            border-radius: var(--border-radius-md);
+            transition: var(--transition);
+        }
+        
+        .contact-item:hover {
+            transform: translateX(-5px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .contact-item strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+        
+        .contact-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-form-container {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .contact-form-container h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: var(--border-radius-md);
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.1);
+        }
+        
+        /* الفوتر المتميز */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gradient-primary);
+        }
+        
+        .footer-section p {
+            opacity: 0.8;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+            transform: translateX(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* تحسينات للهاتف */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .header-controls {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .category-filter {
+                overflow-x: auto;
+                justify-content: flex-start;
+                padding-bottom: 10px;
+                margin-right: -20px;
+                margin-left: -20px;
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+            
+            .category-btn {
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .btn, .whatsapp-btn, .phone-btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-card {
+                padding: 20px;
+            }
+        }
+        
+        /* تأثيرات إضافية */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: var(--gradient-success);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            animation: float 3s ease-in-out infinite;
+            text-decoration: none;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .loading-spinner {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            left: 30px;
+            background: var(--gradient-primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- زر الواتساب العائم -->
+    <a href="https://wa.me/201110760081" target="_blank" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- زر العودة للأعلى -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    
+    <!-- الهيدر -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🌍</span>
+                    <span>خدمات الخليج الشاملة</span>
+                </div>
+                
+                <div class="header-controls">
+                    <a href="https://wa.me/201110760081" target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> تواصل مباشر
+                    </a>
+                    <a href="tel:+201110760081" class="phone-btn">
+                        <i class="fas fa-phone"></i> +201110760081
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم الهيرو -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="animated-text">✨ خدمات منزلية احترافية في جميع أنحاء الخليج ✨</h1>
+            <p>🚀 <strong>نقدم لك تجربة فريدة</strong> مع أكثر من 150 خدمة متخصصة تغطي كل احتياجات منزلك!</p>
+            
+            <div style="margin-top: 3rem;">
+                <a href="#services" class="btn">
+                    <i class="fas fa-rocket"></i> اكتشف خدماتنا المميزة الآن!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- قسم إنشاء لاندنج بيج -->
+    <section id="landing-page" style="background: var(--gradient-secondary); color: white; padding: 4rem 0;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.8rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                    🚀 <span class="animated-text">هل تريد صفحة لاندنج بيج مميزة؟</span> 🚀
+                </h2>
+                <p style="font-size: 1.4rem; max-width: 900px; margin: 0 auto; opacity: 0.95;">
+                    🔥 <strong>أنشئ صفحة مبيعات احترافية لخدمتك في أي دولة خليجية!</strong> 🔥
+                </p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <div style="background: rgba(255, 255, 255, 0.15); padding: 2rem; border-radius: 15px; margin-bottom: 2rem; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                    <h3 style="color: #ffd700; margin-bottom: 1rem; font-size: 1.8rem;">📞 تواصل معنا الآن!</h3>
+                    <p style="font-size: 1.3rem; margin-bottom: 1.5rem;">
+                        <strong>ارسل رسالة على الواتساب تحتوي على:</strong>
+                    </p>
+                    <div style="background: rgba(255, 255, 255, 0.2); padding: 1.5rem; border-radius: 10px; text-align: right; direction: rtl; margin: 0 auto; max-width: 800px; border: 1px solid rgba(255, 255, 255, 0.3);">
+                        <p style="margin: 10px 0; font-size: 1.2rem;">💬 <strong>"أريد عمل لاندنج بيج لخدمتي"</strong></p>
+                        <p style="margin: 10px 0; font-size: 1.2rem;">📍 <strong>في دولة:</strong> [اذكر الدولة]</p>
+                        <p style="margin: 10px 0; font-size: 1.2rem;">🛠️ <strong>مجالي هو:</strong> [اذكر مجال خدمتك]</p>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/201110760081?text=أريد%20عمل%20لاندنج%20بيج%20لخدمتي%20في%20دولة:%20[الدولة]%20مجالي%20هو:%20[مجال الخدمة]" 
+                   target="_blank" 
+                   class="btn" 
+                   style="display: inline-flex; padding: 20px 50px; font-size: 1.4rem; background: var(--gradient-success); margin: 1rem auto; border: none;">
+                    <i class="fab fa-whatsapp"></i> 🚀 تواصل معنا على الواتساب!
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>🔥 خدماتنا المميزة التي يثق بها آلاف العملاء 🔥</h2>
+                <p>🎯 اختر من بين أفضل الخدمات المنزلية المدعومة بفريق محترف وضمان الجودة!</p>
+            </div>
+            
+            <div class="category-filter">
+                <button class="category-btn active" data-category="all">جميع الخدمات</button>
+                <button class="category-btn" data-category="1">🧹 خدمات النظافة والتعقيم</button>
+                <button class="category-btn" data-category="2">🔧 خدمات التركيب والصيانة</button>
+                <button class="category-btn" data-category="3">🎨 خدمات التصميم والديكور</button>
+                <button class="category-btn" data-category="4">💆 خدمات العناية الشخصية</button>
+                <button class="category-btn" data-category="5">🎉 خدمات الترفيه والترفيه</button>
+                <button class="category-btn" data-category="6">👨‍👩‍👧‍👦 خدمات العناية بالأسرة</button>
+                <button class="category-btn" data-category="7">⚙️ خدمات التركيب المتخصص</button>
+                <button class="category-btn" data-category="8">✨ خدمات التنظيف المتخصص</button>
+                <button class="category-btn" data-category="9">🚚 خدمات النقل والتخزين</button>
+                <button class="category-btn" data-category="10">⭐ خدمات إضافية متخصصة</button>
+            </div>
+            
+            <div class="services-grid">
+                <!-- سيتم إضافة بطاقات الخدمات ديناميكياً -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="https://wa.me/201110760081" target="_blank" class="btn" style="background: var(--gradient-success); border: none;">
+                    <i class="fab fa-whatsapp"></i> 💬 احصل على عرض سعر فوري عبر واتساب!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المميزات -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>⭐ لماذا تختار خدمات الخليج الشاملة؟ ⭐</h2>
+                <p>🎁 نقدم لك أكثر من مجرد خدمة.. نقدم لك تجربة فريدة ورضا مضمون!</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>سرعة فائقة</h3>
+                    <p>وصول فريق العمل خلال 60 دقيقة فقط! خدمة 24/7 على مدار الساعة.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👑</div>
+                    <h3>جودة مضمونة</h3>
+                    <p>ضمان يصل إلى سنة على جميع الخدمات مع متابعة دورية.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>أسعار تنافسية</h3>
+                    <p>أفضل الأسعار مع عروض حصرية وخصومات تصل إلى 30%!</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>فريق محترف</h3>
+                    <p>فريق عمل مدرب ومؤهل مع أكثر من 10 سنوات خبرة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اتصل بنا -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>📞 تواصل معنا الآن واحصل على خدمة متميزة! 📞</h2>
+                <p>🎯 اطلب خدمتك الآن واستمتع بتجربة فريدة مع فريق عمل محترف!</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>📱 تواصل معنا مباشرة</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>واتساب مباشر</strong>
+                            <p><a href="https://wa.me/201110760081" target="_blank">201110760081</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>الاتصال المباشر</strong>
+                            <p><a href="tel:+201110760081">+201110760081</a></p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2.5rem; text-align: center;">
+                        <a href="https://wa.me/201110760081" target="_blank" class="btn" style="background: var(--gradient-success);">
+                            <i class="fab fa-whatsapp"></i> 💬 تواصل مباشر
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h3>📝 اطلب خدمتك الآن</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> الاسم الكامل *</label>
+                            <input type="text" id="name" class="form-control" required placeholder="أدخل اسمك الكامل">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone"><i class="fas fa-phone"></i> رقم الهاتف *</label>
+                            <input type="tel" id="phone" class="form-control" required placeholder="أدخل رقم هاتفك">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service"><i class="fas fa-cogs"></i> نوع الخدمة المطلوبة</label>
+                            <select id="service" class="form-control">
+                                <option value="">اختر الخدمة المطلوبة</option>
+                                <option value="plumbing">الصرف الصحي وتسليك المجاري</option>
+                                <option value="cleaning">خدمات النظافة والتعقيم</option>
+                                <option value="moving">نقل العفش والأثاث</option>
+                                <option value="pest">مكافحة الحشرات والآفات</option>
+                                <option value="maintenance">الصيانة المنزلية الشاملة</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> تفاصيل الطلب</label>
+                            <textarea id="message" class="form-control" rows="5" placeholder="🎯 اذكر لنا تفاصيل الخدمة المطلوبة..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> 🚀 إرسال الطلب الآن
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>خدمات الخليج الشاملة</h3>
+                    <p>🏆 <strong>الرائدون في مجال الخدمات المنزلية في الخليج العربي</strong> 🌟 نقدم حلولاً شاملة واحترافية!</p>
+                    
+                    <div class="social-links">
+                        <a href="https://wa.me/201110760081" target="_blank" title="واتساب">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>🚀 خدماتنا السريعة</h3>
+                    <ul>
+                        <li><a href="#" class="service-link" data-service="1"><i class="fas fa-bolt"></i> الصرف الصحي وتسليك المجاري</a></li>
+                        <li><a href="#" class="service-link" data-service="6"><i class="fas fa-bolt"></i> نقل العفش والأثاث</a></li>
+                        <li><a href="#" class="service-link" data-service="7"><i class="fas fa-bolt"></i> مكافحة الحشرات والآفات</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>📍 مناطق خدمتنا</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> السعودية</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> الإمارات</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> قطر</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> الكويت</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> البحرين</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> عُمان</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>📞 اتصل بنا الآن</h3>
+                    <ul>
+                        <li><a href="https://wa.me/201110760081" target="_blank"><i class="fab fa-whatsapp"></i> واتساب: 201110760081</a></li>
+                        <li><a href="tel:+201110760081"><i class="fas fa-phone"></i> هاتف: +201110760081</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© خدمات الخليج الشاملة 2024. جميع الحقوق محفوظة. | 🏆 <strong>التميز في الخدمة هو شعارنا!</strong> 🏆</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // بيانات الخدمات
+        const services = [
+            { id: 1, category: 1, name: "الصرف الصحي وتسليك المجاري", price: 149, icon: "🚽", rating: 4.9 },
+            { id: 2, category: 1, name: "تنظيف وعزل الخزانات", price: 149, icon: "💧", rating: 4.9 },
+            { id: 3, category: 1, name: "جلي وتلميع الرخام والجرانيت", price: 149, icon: "💎", rating: 4.9 },
+            { id: 4, category: 1, name: "تنظيف السجاد والموكيت", price: 149, icon: "🕌", rating: 4.9 },
+            { id: 5, category: 1, name: "تنظيف الكنب والمجالس", price: 149, icon: "🛋️", rating: 4.9 },
+            { id: 6, category: 9, name: "نقل العفش والأثاث", price: 149, icon: "🚚", rating: 4.9 },
+            { id: 7, category: 1, name: "مكافحة الحشرات والآفات", price: 149, icon: "🐛", rating: 4.9 },
+            { id: 8, category: 2, name: "صيانة السباكة", price: 149, icon: "🔧", rating: 4.9 },
+            { id: 9, category: 2, name: "صيانة الكهرباء", price: 149, icon: "⚡", rating: 4.9 },
+            { id: 10, category: 7, name: "العزل المائي والحراري للأسطح", price: 149, icon: "🏠", rating: 4.9 }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // توليد بطاقات الخدمات
+            generateServiceCards();
+            
+            // فلترة الخدمات
+            setupCategoryFilter();
+            
+            // زر العودة للأعلى
+            setupBackToTop();
+            
+            // نموذج الاتصال
+            setupContactForm();
+            
+            // روابط الخدمات في الفوتر
+            setupServiceLinks();
+            
+            // تأثيرات الظهور
+            setupRevealAnimations();
+            
+            // إضافة بعض الخدمات الإضافية للعرض
+            setTimeout(() => {
+                addMoreServices();
+            }, 1000);
+        });
+
+        function generateServiceCards() {
+            const servicesGrid = document.querySelector('.services-grid');
+            servicesGrid.innerHTML = '';
+            
+            services.forEach(service => {
+                const card = document.createElement('a');
+                card.href = `pages/service_${service.id}.html`;
+                card.target = '_blank';
+                card.className = 'service-card';
+                card.dataset.category = service.category;
+                
+                card.innerHTML = `
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-${getServiceImage(service.id)}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <div class="service-icon">${service.icon}</div>
+                        <div class="award-badge">⭐ الأكثر طلباً</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>${service.name}</h3>
+                        <div class="service-price" data-base-price="${service.price}">
+                            <span>${service.price} ر.س</span>
+                            <small>يبدأ من</small>
+                        </div>
+                        <div style="margin-top: 10px; display: flex; align-items: center; gap: 5px;">
+                            ${generateStars(service.rating)}
+                            <span style="color: #6b7280; font-size: 0.9rem; margin-right: 5px;">(${service.rating})</span>
+                        </div>
+                    </div>
+                `;
+                
+                servicesGrid.appendChild(card);
+            });
+        }
+
+        function addMoreServices() {
+            const additionalServices = [
+                { id: 11, category: 2, name: "تركيب وصيانة المكيفات", price: 199, icon: "❄️", rating: 4.8 },
+                { id: 12, category: 3, name: "أعمال الدهان والديكور", price: 299, icon: "🎨", rating: 4.9 },
+                { id: 13, category: 8, name: "تنظيف المسابح وصيانتها", price: 249, icon: "🏊", rating: 4.7 },
+                { id: 14, category: 4, name: "خدمات المساج والسبا المنزلي", price: 179, icon: "💆", rating: 4.9 }
+            ];
+            
+            const servicesGrid = document.querySelector('.services-grid');
+            
+            additionalServices.forEach(service => {
+                const card = document.createElement('a');
+                card.href = `pages/service_${service.id}.html`;
+                card.target = '_blank';
+                card.className = 'service-card';
+                card.dataset.category = service.category;
+                
+                card.innerHTML = `
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-${getServiceImage(service.id)}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <div class="service-icon">${service.icon}</div>
+                        <div class="award-badge">⭐ مميز</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>${service.name}</h3>
+                        <div class="service-price" data-base-price="${service.price}">
+                            <span>${service.price} ر.س</span>
+                            <small>يبدأ من</small>
+                        </div>
+                        <div style="margin-top: 10px; display: flex; align-items: center; gap: 5px;">
+                            ${generateStars(service.rating)}
+                            <span style="color: #6b7280; font-size: 0.9rem; margin-right: 5px;">(${service.rating})</span>
+                        </div>
+                    </div>
+                `;
+                
+                servicesGrid.appendChild(card);
+            });
+        }
+
+        function getServiceImage(id) {
+            const images = [
+                '1600566752355-35792bedcfea',
+                '1626274575195-7f73b43c5df3',
+                '1586023492125-27b2c045efd7',
+                '1545324418-cc1a3fa10c00',
+                '1585412727339-54e4bae1bbee',
+                '1575429198097-0414ec08e8cd',
+                '1497366754035-f200968a6e72',
+                '1616594039964-ae9021a400a0',
+                '1583847268964-b28dc8f51f92',
+                '1556228453-efd6c1ff04f6',
+                '1560750588-73207b1ef5b8',
+                '1543253687-c931c8e01820',
+                '1626274575195-7f73b43c5df3',
+                '1586023492125-27b2c045efd7'
+            ];
+            return images[(id - 1) % images.length];
+        }
+
+        function generateStars(rating) {
+            let stars = '';
+            for (let i = 0; i < 5; i++) {
+                stars += `<span class="rating-star">★</span>`;
+            }
+            return stars;
+        }
+
+        function setupCategoryFilter() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const category = this.dataset.category;
+                    
+                    serviceCards.forEach(card => {
+                        if (category === 'all' || card.dataset.category === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+
+        function setupBackToTop() {
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.style.display = 'flex';
+                } else {
+                    backToTopBtn.style.display = 'none';
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        function setupContactForm() {
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const service = document.getElementById('service').value;
+                const message = document.getElementById('message').value;
+                
+                let whatsappMessage = `مرحباً، أريد طلب خدمة!\n\n`;
+                whatsappMessage += `الاسم: ${name}\n`;
+                whatsappMessage += `الهاتف: ${phone}\n`;
+                if (service) whatsappMessage += `الخدمة: ${document.getElementById('service').options[document.getElementById('service').selectedIndex].text}\n`;
+                if (message) whatsappMessage += `تفاصيل: ${message}\n`;
+                
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                window.open(`https://wa.me/201110760081?text=${encodedMessage}`, '_blank');
+                
+                contactForm.reset();
+                alert('🎉 تم إرسال طلبك بنجاح! سيتم التواصل معك قريباً.');
+            });
+        }
+
+        function setupServiceLinks() {
+            const serviceLinks = document.querySelectorAll('.service-link');
+            
+            serviceLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const serviceId = this.dataset.service;
+                    
+                    document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+                    
+                    setTimeout(() => {
+                        const categoryBtn = document.querySelector(`[data-category="${services.find(s => s.id == serviceId).category}"]`);
+                        if (categoryBtn) categoryBtn.click();
+                    }, 500);
+                });
+            });
+        }
+
+        function setupRevealAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.service-card, .feature-card').forEach(el => {
+                observer.observe(el);
+            });
+        }
+    </script>
+</body>
+</html>
